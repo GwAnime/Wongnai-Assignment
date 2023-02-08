@@ -1,8 +1,8 @@
 
 const fetchYo = () => {
   fetch('http://localhost:3001/')
-    .then(response => response.json())
-    .then(data => console.log(data))
+    .then(response => response.json()) // turn to json file
+    .then(data => console.log(data)) // print data in json file format for easier
 }
 
 function App() {
