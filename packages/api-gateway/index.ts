@@ -1,12 +1,10 @@
-import express, { Application } from "express";
-import fetch from "node-fetch";
+const express = require("express");
+const fetch = require("node-fetch");
+import createServer from "./server";
 
-const app: Application = express();
+export const app = createServer();
 const port = 3001;
-
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-
+// @ts-nocheck
 app.get("/restaurant/:restaurantId", async (req, res) => {
   try {
     const { restaurantId } = req.params;
